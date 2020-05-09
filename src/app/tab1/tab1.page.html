@@ -1,17 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content class="ion-padding" mode="ios">
+    <ion-grid>
+        <ion-row>
+            <div style="width:100%; position: sticky; top: 0px; z-index: 9999">
+                <ion-row style="background-color: white; border-radius: 20px;">
+                    <ion-col size="10">
+                        <ion-searchbar showCancelButton="never" placeholder="" class="mismaAltura no-padding"
+                            style="margin: 0px"></ion-searchbar>
+                    </ion-col>
+                    <ion-col size="2">
+                        <ion-button color="success" size="small" class="no-padding camera-button">
+                            <ion-icon name="camera-outline"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <ion-col size="12">
+                <h5>Categorìas</h5>
+            </ion-col>
+            <ion-col size="12">
+                <ion-slides [options]="categorias" style="height: 100px;">
+                    <ion-slide *ngFor="let grupo of [1,3,4,5,5,6,7]">
+                        <app-categoria></app-categoria>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+            <ion-col size="9">
+                <h4>Recomendados</h4>
+            </ion-col>
+            <ion-col size="3">
+                <h6>Ver todos</h6>
+            </ion-col>
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of [1,3]">
+                    <img src="https://media.aws.alkosto.com/media/catalog/product/cache/6/image/69ace863370f34bdf190e4e164b6e123/e/s/es-galaxy-watch-r800-sm-r800nzsaphe-lperspectivesilver-111564337.jpg" alt="" srcset="">
+                    <h5>Leather Wristwatch</h5>
+                    <small>Tag Heuer</small>
+                    <h6>$755</h6>
+                </ion-col>
+            </ion-row>
+            <ion-col size="12">
+                <img class="img1"
+                    src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/201908/Xiaomi_Mi_A3_9_1-x675.jpg?1PXOMsUhldkDD0Z8oLz8u3MKV2NKOj11"
+                    alt="" srcset="">
+            </ion-col>
+            <ion-col size="12">
+                <h5>Marcas Famosas</h5>
+            </ion-col>
+            <ion-col size="12">
+                <ion-slides [options]="marcas" style="height: 125px;">
+                    <ion-slide *ngFor="let grupo of [1,3,4,5,5,6,7]">
+                        <app-marca></app-marca>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
