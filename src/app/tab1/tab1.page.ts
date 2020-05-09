@@ -8,6 +8,22 @@ import { Component } from '@angular/core';
 export class Tab1Page {
   marcas = {
     slidesPerView: 1.6,
+    breakpoints:{
+      '@0.75':{
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      '@1.20':{
+        slidesPerView: 3,
+        spaceBetween: 40
+      },
+      '@1.80':{
+        slidesPerView: 4,
+        spaceBetween: 50
+      },
+      
+      
+    },
     freeMode: true,
     coverflowEffect: {
       rotate: 50,

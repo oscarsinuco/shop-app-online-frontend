@@ -16,3 +16,16 @@
     height: 25vh;
     width: 100%;
 }
+
+.ponerPadding{
+    padding:30px 60px;
+}
+@media(max-width:991px){
+    .menuHorizontal{
+        display: none;
+    }
+    
+    .ponerPadding{
+        padding:15px;
+    }
+}

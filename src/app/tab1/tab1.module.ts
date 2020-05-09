@@ -7,6 +7,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { MarcaComponent } from '../marca/marca.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { CategoriaComponent } from '../categoria/categoria.component';
+import { MenuVerticalComponent } from '../menu-vertical/menu-vertical.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { CategoriaComponent } from '../categoria/categoria.component';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule
   ],
-  declarations: [Tab1Page, MarcaComponent, CategoriaComponent]
+  declarations: [Tab1Page, MarcaComponent, CategoriaComponent, MenuVerticalComponent]
 })
 export class Tab1PageModule {}
