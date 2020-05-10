@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-categoria',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categoria.component.scss'],
 })
 export class CategoriaComponent implements OnInit {
-
+  @Input() nombre: string;
+  @Input() imagen: string;
   constructor() { }
 
   ngOnInit() {}

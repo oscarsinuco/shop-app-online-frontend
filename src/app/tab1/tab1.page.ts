@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PeticionesService } from '../peticiones.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,16 +8,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
   marcas = {
-    breakpoints:{
-      0:{
+    breakpoints: {
+      0: {
         slidesPerView: 1.8,
         spaceBetween: 10
       },
-      500:{
+      500: {
         slidesPerView: 3.5,
         spaceBetween: 40
       },
-      1000:{
+      1000: {
         slidesPerView: 4.5,
         spaceBetween: 50
       },
@@ -31,16 +32,16 @@ export class Tab1Page {
     }
   };
   categorias = {
-    breakpoints:{
-      0:{
+    breakpoints: {
+      0: {
         slidesPerView: 4.4,
         spaceBetween: 10
       },
-      500:{
+      500: {
         slidesPerView: 4.4,
         spaceBetween: 2
       },
-      1000:{
+      1000: {
         slidesPerView: 7.5,
         spaceBetween: 50
       },
@@ -54,6 +55,18 @@ export class Tab1Page {
       slideShadows: true,
     }
   }
-  constructor() {}
+  public categoriasArray: any;
+  constructor(private peticiones: PeticionesService) {
+    this.peticiones.getCategorias().then(response => {
+
+      return response.json()
+
+    }).then(data => {
+
+      console.log(data)
+      this.categoriasArray = data['categorias']
+      
+    })
+  }
 
 }
