@@ -7,22 +7,19 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
   marcas = {
-    slidesPerView: 1.6,
     breakpoints:{
-      '@0.75':{
-        slidesPerView: 2,
-        spaceBetween: 20
+      0:{
+        slidesPerView: 1.8,
+        spaceBetween: 10
       },
-      '@1.20':{
-        slidesPerView: 3,
+      500:{
+        slidesPerView: 3.5,
         spaceBetween: 40
       },
-      '@1.80':{
-        slidesPerView: 4,
+      1000:{
+        slidesPerView: 4.5,
         spaceBetween: 50
       },
-      
-      
     },
     freeMode: true,
     coverflowEffect: {
@@ -34,7 +31,20 @@ export class Tab1Page {
     }
   };
   categorias = {
-    slidesPerView: 4.4,
+    breakpoints:{
+      0:{
+        slidesPerView: 4.4,
+        spaceBetween: 2
+      },
+      500:{
+        slidesPerView: 4.4,
+        spaceBetween: 2
+      },
+      1000:{
+        slidesPerView: 7.5,
+        spaceBetween: 50
+      },
+    },
     freeMode: true,
     coverflowEffect: {
       rotate: 50,
