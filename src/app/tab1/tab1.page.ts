@@ -57,16 +57,22 @@ export class Tab1Page {
   }
   public categoriasArray: any;
   constructor(private peticiones: PeticionesService) {
-    this.peticiones.getCategorias().then(response => {
-
-      return response.json()
-
-    }).then(data => {
-
-      console.log(data)
+    this.listarCategorias().then(data => {
       this.categoriasArray = data['categorias']
-      
     })
+  }
+
+  listarCategorias() {
+    return this.peticiones.getCategorias().then(response => {
+      return response.json()
+    })
+  }
+
+  async doRefresh(event) {
+    this.categoriasArray = null;
+    let res = await this.listarCategorias();
+    this.categoriasArray = res['categorias']
+    event.target.complete();
   }
 
 }

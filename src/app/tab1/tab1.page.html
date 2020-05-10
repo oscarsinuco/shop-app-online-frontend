@@ -1,11 +1,14 @@
 <ion-content mode="ios" class="fondo">
+        <ion-refresher style="z-index: 9999" slot="fixed" pullFactor="0.5" pullMin="100" pullMax="500" mode="md" (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content></ion-refresher-content>
+              </ion-refresher>
     <ion-grid style="padding: 0px;">
         <ion-row>
             <ion-col class="menuHorizontal" size="3" style="padding: 0px;">
                 <app-menu-vertical></app-menu-vertical>
             </ion-col>
             <ion-col class="ponerPadding" size="12" size-lg="9">
-                <div class="fondo" style="width:100%; position: sticky; top: 0px; z-index: 9999">
+                <div class="fondo" style="width:100%; position: sticky; top: 0px; z-index: 2">
                     <ion-row style="padding-top:10px;padding-bottom:10px;border-radius: 20px;">
                         <ion-col size="10" size-lg="11">
                             <ion-searchbar showCancelButton="never" placeholder="" class="mismaAltura no-padding"
@@ -24,9 +27,23 @@
                 </ion-row>
                 <ion-col size="12">
                     <ion-slides [options]="categorias" style="height: 100px;">
-                        <ion-slide *ngFor="let categoria of categoriasArray">
-                            <app-categoria nombre="{{categoria.nombre}}" imagen="{{categoria.imagen}}"></app-categoria>
-                        </ion-slide>
+
+                        <ng-container *ngIf="!categoriasArray">
+
+                            <ion-slide *ngFor="let categoria of [1,2,4,4,5,6]">
+                                <ion-avatar slot="start">
+                                    <ion-skeleton-text animated></ion-skeleton-text>
+                                </ion-avatar>
+                            </ion-slide>
+                        </ng-container>
+                        <ng-container *ngIf="categoriasArray">
+
+                            <ion-slide *ngFor="let categoria of categoriasArray">
+                                <app-categoria nombre="{{categoria.nombre}}" imagen="{{categoria.imagen}}">
+                                </app-categoria>
+                            </ion-slide>
+                        </ng-container>
+
                     </ion-slides>
                 </ion-col>
                 <ion-row>
