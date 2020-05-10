@@ -13,8 +13,11 @@
 .img1{
     margin-top: 30px;
     border-radius: 5px;
-    height: 25vh;
     width: 100%;
+    overflow: hidden;
+    height:200px;
+    background-size: cover;
+    background-image: url('https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/201908/Xiaomi_Mi_A3_9_1-x675.jpg?1PXOMsUhldkDD0Z8oLz8u3MKV2NKOj11');
 }
 
 .ponerPadding{
