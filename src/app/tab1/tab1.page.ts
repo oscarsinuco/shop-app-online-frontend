@@ -34,7 +34,7 @@ export class Tab1Page {
     breakpoints:{
       0:{
         slidesPerView: 4.4,
-        spaceBetween: 2
+        spaceBetween: 10
       },
       500:{
         slidesPerView: 4.4,

@@ -26,6 +26,73 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Light.ttf');//mine
+}
+
+
+
 .no-margin{
     margin: 0px !important;
 }
+
+.fondo{
+    --background: #ffffff;
+    background-color: #ffffff;
+} 
+//COLOR DE LA LETRA
+.r_36,.r_30,.r_24,.r_22,.r_20, .r_15, .r_13, .r_12{
+    color: #000000;
+}
+.action{
+    --background: #00C569;
+}
+
+
+
+
+
+//ESTO PARA PANTALLAS GRANDES
+
+.r_36{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 36px;
+}
+.r_30{
+    font-family: 'Roboto';
+    font-size: 30px;
+    
+}
+.r_24{
+    font-family: 'Roboto';
+    font-size: 24px;
+}
+.r_22{
+    font-family: 'Roboto';
+    font-size: 22px;
+    color: gray;
+}
+
+
+
+//ESTO PARA MÓVILES
+.r_20{
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.r_15{
+    font-family: 'Roboto';
+    font-size: 15px;
+}.r_13{
+    font-family: 'Roboto';
+    font-size: 13px;
+}.r_12{
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: gray;
+}
+
+
+
