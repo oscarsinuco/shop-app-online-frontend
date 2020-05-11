@@ -34,15 +34,15 @@ export class Tab1Page {
   categorias = {
     breakpoints: {
       0: {
-        slidesPerView: 4.4,
-        spaceBetween: 10
+        slidesPerView: 3.5,
+        spaceBetween: 5
       },
       500: {
-        slidesPerView: 4.4,
+        slidesPerView: 3.3,
         spaceBetween: 2
       },
       1000: {
-        slidesPerView: 7.5,
+        slidesPerView: 6.5,
         spaceBetween: 50
       },
     },
